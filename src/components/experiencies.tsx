@@ -1,24 +1,42 @@
+import { ExperienceItem } from './experience-item'
+import {
+	Section,
+	SectionContent,
+	SectionHeader,
+	SectionLead,
+	SectionTitle,
+} from './section'
+
 export function Experiencies() {
 	return (
-		<section>
-			<header>
-				<h1>Experiences</h1>
-				<h1>How Can I Assist You?</h1>
-			</header>
+		<Section>
+			<SectionHeader>
+				<SectionLead>Experiences</SectionLead>
+				<SectionTitle>Explore My Journey</SectionTitle>
+			</SectionHeader>
 
-			<main>
-				<div>UI Design</div>
-
-				<div>Product Design</div>
-
-				<div>Product Managment</div>
-
-				<div>Front-end Developer</div>
-
-				{/* <div>
-						Back
-					</div> */}
-			</main>
-		</section>
+			<SectionContent>
+				<div className="">
+					<ExperienceItem
+						logoUrl="./"
+						key={1}
+						title="Creative Minds, New York"
+						resume="Lorem Ipsum is simply dummy text of the printing"
+					/>
+					<ExperienceItem
+						logoUrl="./"
+						key={2}
+						title="Creative Minds, New York"
+						resume="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's"
+					/>
+					<ExperienceItem
+						logoUrl="./"
+						key={3}
+						title="Creative Minds, New York"
+						resume="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+					/>
+				</div>
+			</SectionContent>
+		</Section>
 	)
 }

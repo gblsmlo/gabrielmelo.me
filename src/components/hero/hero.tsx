@@ -28,7 +28,7 @@ export function Hero() {
 					</div>
 				</div>
 
-				<div className="flex flex-1/2 items-center justify-center">
+				<div className="hidden flex-1/2 items-center justify-center lg:flex">
 					<HeroImage />
 				</div>
 			</Container>
