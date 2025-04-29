@@ -1,17 +1,18 @@
-import '@/styles/global.css'
+import { Header } from '@components/header'
+import '@styles/global.css'
 
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Source_Sans_3 } from 'next/font/google'
 
-const inter = Inter({
-	subsets: ['latin'],
+const SourceSans = Source_Sans_3({
 	display: 'swap',
+	subsets: ['latin'],
+	weight: ['400', '600', '800', '900'],
 })
 
 export const metadata: Metadata = {
-	title: 'tc96/next-starter',
-	description:
-		'This is a boilerplate to help you quickly set up and start building applications with Next.js. It includes essential configurations, tools, and best practices to get you started.',
+	title: 'Gabriel Melo',
+	description: '',
 }
 
 export default function RootLayout({
@@ -20,11 +21,10 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang="pt-BR">
-			<body className={`${inter.className} antialiased`}>
-				<div className="flex h-screen items-center justify-center">
-					{children}
-				</div>
+		<html lang="pt-BR" data-theme="dark">
+			<body className={`${SourceSans.className} antialiased`}>
+				<Header />
+				{children}
 			</body>
 		</html>
 	)

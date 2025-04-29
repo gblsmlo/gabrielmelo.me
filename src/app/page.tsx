@@ -1,3 +1,11 @@
+// import { Experiencies } from '@components/experiencies'
+import { Hero } from '@components/hero/hero'
+
 export default function HomePage() {
-	return <h1 className="font-bold text-2xl">Homepage</h1>
+	return (
+		<>
+			<Hero />
+			{/* <Experiencies /> */}
+		</>
+	)
 }

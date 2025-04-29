@@ -1,5 +1,5 @@
 {
-  "name": "tc96-next-starter",
+  "name": "gabrielmelo.me",
   "version": "0.0.3",
   "private": true,
   "scripts": {
@@ -13,9 +13,15 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.1.2",
+    "@remixicon/react": "^4.6.0",
+    "axios": "^1.8.4",
+    "class-variance-authority": "^0.7.1",
+    "motion": "^12.9.2",
     "next": "15.3.0",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "tailwind-merge": "^3.0.2"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
