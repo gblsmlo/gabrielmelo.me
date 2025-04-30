@@ -1,10 +1,10 @@
 import { redirectToPreviewURL } from '@prismicio/next'
 import type { NextRequest } from 'next/server'
 
-import { createClient } from '../../../prismicio'
+import { prismic } from '@lib/prismicio'
 
 export async function GET(request: NextRequest) {
-	const client = createClient()
+	const client = prismic
 
 	return await redirectToPreviewURL({ client, request })
 }

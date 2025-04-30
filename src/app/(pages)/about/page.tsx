@@ -1,5 +1,5 @@
+import { prismic } from '@lib/prismicio'
 import { notFound } from 'next/navigation'
-import { prismic } from 'prismicio'
 import {
 	PageHeader,
 	PageHeaderIntro,

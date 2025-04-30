@@ -1,4 +1,5 @@
-import { prismic } from 'prismicio'
+import { prismic } from '@lib/prismicio'
+import { notFound } from 'next/navigation'
 import {
 	PageHeader,
 	PageHeaderIntro,
@@ -6,7 +7,7 @@ import {
 } from '../_components/page-header'
 
 export default async function PortfolioPage() {
-	const portfolio = await prismic.getSingle('portfolio')
+	const portfolio = await prismic.getSingle('portfolio').catch(() => notFound())
 
 	return (
 		<>
