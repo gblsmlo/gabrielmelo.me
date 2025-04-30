@@ -399,7 +399,7 @@ export type ExperiencesDocument<Lang extends string = string> =
 		Lang
 	>
 
-// type GlobalNavigationDocumentData = {}
+type GlobalNavigationDocumentData = Record<string, never>
 
 /**
  * Global Navigation document from Prismic

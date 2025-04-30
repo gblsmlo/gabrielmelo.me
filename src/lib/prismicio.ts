@@ -8,16 +8,17 @@ import sm from '../../slicemachine.config.json'
 
 export const repositoryName = sm.repositoryName
 
+// TODO: Update with your route resolvers.
 const routes: Route[] = [
 	{ type: 'home', path: '/' },
 	{ type: 'experiences', path: '/experiences' },
 	{ type: 'portfolio', path: '/portfolio' },
 	{ type: 'works', path: '/portfolio/works/:uid' },
-	{ type: 'blog_post', path: '/blog/:uid' },
+	// { type: 'blog_post', path: '/blog/:uid' },
 	{ type: 'about', path: '/about' },
 ]
 
-export function createClient(config: ClientConfig = {}) {
+function createClient(config: ClientConfig = {}) {
 	const client = baseCreateClient(repositoryName, {
 		routes,
 		fetchOptions:
@@ -31,3 +32,5 @@ export function createClient(config: ClientConfig = {}) {
 
 	return client
 }
+
+export const prismic = createClient()
