@@ -1,6 +1,7 @@
 import { Footer } from '@components/footer'
 import { Header } from '@components/header'
 import { Hero } from '@components/hero/hero'
+import { ToogleMenu } from '@components/menu-toggle'
 import {
 	Section,
 	SectionContent,
