@@ -13,22 +13,22 @@ export function Header() {
 			<div className="flex h-full items-center justify-center bg-background">
 				<Container className="flex grow items-center justify-between">
 					<div className="flex items-center gap-2">
-						<div className="block lg:hidden">
+						{/* <div className="block lg:hidden">
 							<Button size="icon" variant="ghost">
 								<RiMenu2Line size={24} widths={24} className="size-5" />
 							</Button>
-						</div>
+						</div> */}
 						<NavBrand>
 							<Logo />
 						</NavBrand>
 					</div>
-					<NavMenu className="hidden lg:flex">
+					<NavMenu>
 						<NavLink href="/">Home</NavLink>
 						<NavLink href="/experiences">Experiences</NavLink>
 						<NavLink href="/portfolio">Portfolio</NavLink>
-						<NavLink href="/blog">Blog</NavLink>
+						{/* <NavLink href="/blog">Blog</NavLink>
 						<NavLink href="/about">About</NavLink>
-						<NavLink href="/contact">Contact</NavLink>
+						<NavLink href="/contact">Contact</NavLink> */}
 					</NavMenu>
 					<NavAction />
 				</Container>

@@ -7,7 +7,9 @@ export function NavMenu({
 }: React.ComponentProps<'nav'>) {
 	return (
 		<nav
-			className={cn(`flex items-center justify-center gap-4 ${className}`)}
+			className={cn(
+				`flex items-center justify-center gap-4 lg:gap-6 ${className}`,
+			)}
 			{...props}
 		>
 			{children}

@@ -17,7 +17,11 @@ function Section({
 }
 
 function SectionHeader({ children }: React.ComponentProps<'header'>) {
-	return <header className="flex flex-col gap-2 lg:gap-4">{children}</header>
+	return (
+		<header className="flex flex-col items-center justify-center gap-2 text-center lg:gap-4">
+			{children}
+		</header>
+	)
 }
 
 function SectionLead({
@@ -55,7 +59,7 @@ function SectionTitle({
 }
 
 function SectionContent({ children }: React.ComponentProps<'main'>) {
-	return <main className="py-6">{children}</main>
+	return <main className="py-4 lg:py-10">{children}</main>
 }
 
 export { Section, SectionHeader, SectionContent, SectionTitle, SectionLead }

@@ -11,7 +11,8 @@ const SourceSans = Source_Sans_3({
 
 export const metadata: Metadata = {
 	title: 'Gabriel Melo',
-	description: '',
+	description:
+		'A Frontend who transforms ideas into seamless digital experiences',
 }
 
 export default function RootLayout({

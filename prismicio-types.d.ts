@@ -210,7 +210,7 @@ export type ContactDocument<Lang extends string = string> =
 /**
  * Item in *experience → experiences*
  */
-// export type ExperienceDocumentDataExperiencesItem = {}
+export type ExperienceDocumentDataExperiencesItem = Record<string, never>
 
 type ExperienceDocumentDataSlicesSlice = never
 
@@ -324,6 +324,36 @@ export type ExperienceDocument<Lang extends string = string> =
 	>
 
 /**
+ * Item in *experiences → tags*
+ */
+export interface ExperiencesDocumentDataTagsItem {
+	/**
+	 * tag field in *experiences → tags*
+	 *
+	 * - **Field Type**: Content Relationship
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: experiences.tags[].tags
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	tags: prismic.ContentRelationshipField<'tags'>
+}
+
+/**
+ * Item in *experiences → works*
+ */
+export interface ExperiencesDocumentDataWorksItem {
+	/**
+	 * work field in *experiences → works*
+	 *
+	 * - **Field Type**: Content Relationship
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: experiences.works[].works
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	works: prismic.ContentRelationshipField<'works'>
+}
+
+/**
  * Content for experiences documents
  */
 interface ExperiencesDocumentData {
@@ -381,6 +411,28 @@ interface ExperiencesDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
 	logo: prismic.ImageField<never>
+
+	/**
+	 * tags field in *experiences*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: experiences.tags[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#group
+	 */
+	tags: prismic.GroupField<Simplify<ExperiencesDocumentDataTagsItem>>
+
+	/**
+	 * works field in *experiences*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: experiences.works[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#group
+	 */
+	works: prismic.GroupField<Simplify<ExperiencesDocumentDataWorksItem>>
 }
 
 /**
@@ -605,6 +657,21 @@ export type TagsDocument<Lang extends string = string> =
 	prismic.PrismicDocumentWithUID<Simplify<TagsDocumentData>, 'tags', Lang>
 
 /**
+ * Item in *works → experience*
+ */
+export interface WorksDocumentDataExperienceItem {
+	/**
+	 * items field in *works → experience*
+	 *
+	 * - **Field Type**: Content Relationship
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: works.experience[].items
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	items: prismic.ContentRelationshipField<'experiences'>
+}
+
+/**
  * Content for works documents
  */
 interface WorksDocumentData {
@@ -673,6 +740,39 @@ interface WorksDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
 	 */
 	content: prismic.RichTextField
+
+	/**
+	 *  Published at field in *works*
+	 *
+	 * - **Field Type**: Date
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: works.published_at
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#date
+	 */
+	published_at: prismic.DateField
+
+	/**
+	 * experience field in *works*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: works.experience[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#group
+	 */
+	experience: prismic.GroupField<Simplify<WorksDocumentDataExperienceItem>>
+
+	/**
+	 * link field in *works*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: works.link
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>
 }
 
 /**
@@ -1034,6 +1134,8 @@ declare module '@prismicio/client' {
 			ExperienceDocumentDataSlicesSlice,
 			ExperiencesDocument,
 			ExperiencesDocumentData,
+			ExperiencesDocumentDataTagsItem,
+			ExperiencesDocumentDataWorksItem,
 			GlobalNavigationDocument,
 			GlobalNavigationDocumentData,
 			HomeDocument,
@@ -1046,6 +1148,7 @@ declare module '@prismicio/client' {
 			TagsDocumentData,
 			WorksDocument,
 			WorksDocumentData,
+			WorksDocumentDataExperienceItem,
 			AllDocumentTypes,
 			CallToActionSlice,
 			CallToActionSliceDefaultPrimary,
