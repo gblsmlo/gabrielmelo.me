@@ -1,4 +1,3 @@
-import { Header } from '@components/header'
 import '@styles/global.css'
 
 import type { Metadata } from 'next'
@@ -22,10 +21,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="pt-BR" data-theme="dark">
-			<body className={`${SourceSans.className} antialiased`}>
-				<Header />
-				{children}
-			</body>
+			<body className={`${SourceSans.className} antialiased`}>{children}</body>
 		</html>
 	)
 }

@@ -1,13 +1,13 @@
-import { ExperienceItem } from './experience-item'
+import { ExperienceItem } from '../experience-item'
 import {
 	Section,
 	SectionContent,
 	SectionHeader,
 	SectionLead,
 	SectionTitle,
-} from './section'
+} from '../section'
 
-export function Experiencies() {
+export function ExperienciesSection() {
 	return (
 		<Section>
 			<SectionHeader>
