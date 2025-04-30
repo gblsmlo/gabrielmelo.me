@@ -10,30 +10,36 @@
     "lint:staged": "biome check --staged --write",
     "lint:ci": "biome ci",
     "check:update": "npm-check-updates -i --color",
-    "prepare": "husky"
+    "prepare": "husky",
+    "slicemachine": "start-slicemachine"
   },
   "dependencies": {
-    "@radix-ui/react-slot": "^1.1.2",
+    "@prismicio/client": "^7.17.2",
+    "@prismicio/next": "^2.0.1",
+    "@prismicio/react": "^3.2.1",
+    "@radix-ui/react-slot": "^1.2.0",
     "@remixicon/react": "^4.6.0",
-    "axios": "^1.8.4",
+    "axios": "^1.9.0",
     "class-variance-authority": "^0.7.1",
     "motion": "^12.9.2",
-    "next": "15.3.0",
+    "next": "15.3.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "tailwind-merge": "^3.0.2"
+    "tailwind-merge": "^3.2.0"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
+    "@slicemachine/adapter-next": "^0.3.75",
     "@tailwindcss/postcss": "^4",
     "@tc96/biome-config": "^1.1.3",
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "husky": "^9.1.7",
-    "npm-check-updates": "^17.1.18",
+    "npm-check-updates": "^18.0.1",
+    "slice-machine-ui": "^2.15.2",
     "tailwindcss": "^4",
     "typescript": "^5"
   },
