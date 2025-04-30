@@ -1,4 +1,4 @@
-lockfileVersion: '9.0'
+lockfileVersion: '10.0'
 
 settings:
   autoInstallPeers: true
@@ -29,9 +29,6 @@ importers:
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
-      gabrielmelo.me:
-        specifier: 'link:'
-        version: 'link:'
       motion:
         specifier: ^12.9.2
         version: 12.9.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
