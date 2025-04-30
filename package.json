@@ -37,6 +37,7 @@
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "clsx": "^2.1.1",
     "husky": "^9.1.7",
     "npm-check-updates": "^18.0.1",
     "slice-machine-ui": "^2.15.2",
