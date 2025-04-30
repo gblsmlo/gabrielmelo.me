@@ -49,6 +49,42 @@
 					},
 					"thumbnails": []
 				}
+			},
+			"tags": {
+				"type": "Group",
+				"config": {
+					"label": "tags",
+					"repeat": true,
+					"fields": {
+						"tags": {
+							"type": "Link",
+							"config": {
+								"label": "tag",
+								"select": "document",
+								"repeat": false,
+								"customtypes": ["tags"]
+							}
+						}
+					}
+				}
+			},
+			"works": {
+				"type": "Group",
+				"config": {
+					"label": "works",
+					"repeat": true,
+					"fields": {
+						"works": {
+							"type": "Link",
+							"config": {
+								"label": "work",
+								"select": "document",
+								"repeat": false,
+								"customtypes": ["works"]
+							}
+						}
+					}
+				}
 			}
 		}
 	}

@@ -58,6 +58,42 @@
 					"allowTargetBlank": true,
 					"multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
 				}
+			},
+			"published_at": {
+				"type": "Date",
+				"config": {
+					"label": " Published at",
+					"placeholder": ""
+				}
+			},
+			"experience": {
+				"type": "Group",
+				"config": {
+					"label": "experience",
+					"repeat": true,
+					"fields": {
+						"items": {
+							"type": "Link",
+							"config": {
+								"label": "items",
+								"select": "document",
+								"repeat": false,
+								"customtypes": ["experiences"]
+							}
+						}
+					}
+				}
+			},
+			"link": {
+				"type": "Link",
+				"config": {
+					"label": "link",
+					"placeholder": "",
+					"select": null,
+					"allowTargetBlank": true,
+					"allowText": true,
+					"repeat": false
+				}
 			}
 		}
 	}

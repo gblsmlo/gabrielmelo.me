@@ -1,6 +1,6 @@
 function PageHeader({ children }: React.ComponentProps<'header'>) {
 	return (
-		<header className="space-y-2 py-20 text-center lg:gap-4 lg:space-y-4">
+		<header className="space-y-2 py-10 text-center lg:gap-4 lg:space-y-4 lg:py-20">
 			{children}
 		</header>
 	)
@@ -16,7 +16,7 @@ function PageHeaderTitle({ children }: React.ComponentProps<'h1'>) {
 
 function PageHeaderIntro({ children }: React.ComponentProps<'h2'>) {
 	return (
-		<h2 className="font-semibold text-foreground text-lg uppercase leading-none">
+		<h2 className="font-semibold text-foreground uppercase leading-none lg:text-lg">
 			{children}
 		</h2>
 	)

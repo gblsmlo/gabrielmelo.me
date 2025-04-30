@@ -26,9 +26,9 @@ export function Header() {
 						<NavLink href="/">Home</NavLink>
 						<NavLink href="/experiences">Experiences</NavLink>
 						<NavLink href="/portfolio">Portfolio</NavLink>
-						<NavLink href="/blog">Blog</NavLink>
+						{/* <NavLink href="/blog">Blog</NavLink>
 						<NavLink href="/about">About</NavLink>
-						<NavLink href="/contact">Contact</NavLink>
+						<NavLink href="/contact">Contact</NavLink> */}
 					</NavMenu>
 					<NavAction />
 				</Container>
