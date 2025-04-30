@@ -1,4 +1,4 @@
-import { createClient } from '@lib/prismicio'
+import { prismic } from '@lib/prismicio'
 import { notFound } from 'next/navigation'
 import {
 	PageHeader,
@@ -7,8 +7,6 @@ import {
 } from '../_components/page-header'
 
 export default async function ContactPage() {
-	const prismic = createClient()
-
 	const contact = await prismic.getSingle('contact').catch(() => notFound())
 
 	return (
